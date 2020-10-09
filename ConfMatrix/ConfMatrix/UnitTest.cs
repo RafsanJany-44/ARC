@@ -1,7 +1,7 @@
 using UnitTest;
 using Xunit;
 public class TestClass{
-   Calc obj= new Calc("72","9","4","30");
+   Calc actual= new Calc("72","9","4","30");
    // acurate result what we are seeking for:
    float expectedAccuracy = 0.66086954f;
     float expectedPrecision = 0.8888889f;
@@ -12,26 +12,27 @@ public class TestClass{
     [Fact]
     public void TestAccuracy()
     {
-        Assert.Equal(expectedAccuracy,obj.accuracy());
+        Assert.Equal(expectedAccuracy,actual.accuracy());
     }
     [Fact]
     public void TestPrecision()
     {
-        Assert.Equal(expectedPrecision,obj.precision());
+        Assert.Equal(expectedPrecision,actual.precision());
     }
     [Fact]
     public void TestSensitivity()
     {
-        Assert.Equal(expectedSensitivity,obj.sensitivity());
+        Assert.Equal(expectedSensitivity,actual.sensitivity());
     }
     [Fact]
     public void TestSpecificity()
     {
-        Assert.Equal(expectedSpecificity,obj.specificity());
+        Assert.Equal(expectedSpecificity,actual.specificity());
     }
     [Fact]
     public void TestF1Score()
     {
-        Assert.Equal(expectedF1Score,obj.f1Score());
+        Assert.Equal(expectedF1Score,actual.f1Score());
     }
+
 }
