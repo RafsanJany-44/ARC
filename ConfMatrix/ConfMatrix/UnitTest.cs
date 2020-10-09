@@ -35,4 +35,32 @@ public class TestClass{
         Assert.Equal(expectedF1Score,actual.f1Score());
     }
 
+    Calc corrupt=new Calc("27","90","40","3");
+
+    [Fact]
+    public void TestAccuracy2()
+    {
+        Assert.Equal(expectedAccuracy,corrupt.accuracy());
+    }
+    [Fact]
+    public void TestPrecisio2()
+    {
+        Assert.Equal(expectedPrecision,corrupt.precision());
+    }
+    [Fact]
+    public void TestSensitivity2()
+    {
+        Assert.Equal(expectedSensitivity,corrupt.sensitivity());
+    }
+    [Fact]
+    public void TestSpecificity2()
+    {
+        Assert.Equal(expectedSpecificity,corrupt.specificity());
+    }
+    [Fact]
+    public void TestF1Score2()
+    {
+        Assert.Equal(expectedF1Score,corrupt.f1Score());
+    }
+
 }
