@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/ConfMatrix.csproj": {}
+  },
+  "projects": {
+    "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/ConfMatrix.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/ConfMatrix.csproj",
+        "projectName": "ConfMatrix",
+        "projectPath": "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/ConfMatrix.csproj",
+        "packagesPath": "/Users/rafsan/.nuget/packages/",
+        "outputPath": "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/rafsan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.8.0-preview-20200921-01, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

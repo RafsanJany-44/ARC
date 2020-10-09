@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "dgSpecHash": "Yid3ZY9FQF0hNFWgVNb4IY16Ts1CAQAbcHijGtZHAARyccPOrsvchfEMbc83BR+NYv7W0unDv6T8SXaLg2YE5A==",
+  "success": false,
+  "projectFilePath": "/Users/rafsan/Documents/GitHub/practice_cell/ConfMatrix/ConfMatrix/ConfMatrix.csproj",
+  "expectedPackageFiles": [
+    "/Users/rafsan/.nuget/packages/microsoft.net.test.sdk/16.8.0-preview-20200921-01/microsoft.net.test.sdk.16.8.0-preview-20200921-01.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit/2.4.1/xunit.2.4.1.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.analyzers/0.10.0/xunit.analyzers.0.10.0.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.assert/2.4.1/xunit.assert.2.4.1.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.core/2.4.1/xunit.core.2.4.1.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.extensibility.core/2.4.1/xunit.extensibility.core.2.4.1.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.extensibility.execution/2.4.1/xunit.extensibility.execution.2.4.1.nupkg.sha512",
+    "/Users/rafsan/.nuget/packages/xunit.runner.visualstudio/2.4.3/xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package xunit.assert 2.4.1 is not compatible with net40 (.NETFramework,Version=v4.0). Package xunit.assert 2.4.1 supports: netstandard1.1 (.NETStandard,Version=v1.1)",
+      "libraryId": "xunit.assert",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package xunit.extensibility.core 2.4.1 is not compatible with net40 (.NETFramework,Version=v4.0). Package xunit.extensibility.core 2.4.1 supports:\n  - net452 (.NETFramework,Version=v4.5.2)\n  - netstandard1.1 (.NETStandard,Version=v1.1)",
+      "libraryId": "xunit.extensibility.core",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package xunit.extensibility.execution 2.4.1 is not compatible with net40 (.NETFramework,Version=v4.0). Package xunit.extensibility.execution 2.4.1 supports:\n  - net452 (.NETFramework,Version=v4.5.2)\n  - netstandard1.1 (.NETStandard,Version=v1.1)",
+      "libraryId": "xunit.extensibility.execution",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0"
+      ]
+    }
+  ]
+}
