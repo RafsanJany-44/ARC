@@ -101,27 +101,27 @@ public class TestClass{
     Calc cha=new Calc("a","34","b","56");
    
    [Fact]
-    public void FaildTestAccuracy4()
+    public void FaildTestAccuracy()
     {
         Assert.NotEqual(expectedAccuracy,cha.accuracy());
     }
     [Fact]
-    public void FaildTestPrecisio4()
+    public void FaildTestPrecisio()
     {
         Assert.NotEqual(expectedPrecision,cha.precision());
     }
     [Fact]
-    public void FaildTestSensitivity4()
+    public void FaildTestSensitivity()
     {
         Assert.NotEqual(expectedSensitivity,cha.sensitivity());
     }
     [Fact]
-    public void FaildTestSpecificity3()
+    public void FaildTestSpecificity()
     {
         Assert.NotEqual(expectedSpecificity,cha.specificity());
     }
     [Fact]
-    public void FaildTestF1Score4()
+    public void FaildTestF1Score()
     {
         Assert.NotEqual(expectedF1Score,cha.f1Score());
     }
