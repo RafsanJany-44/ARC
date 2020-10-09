@@ -82,3 +82,5 @@ SET ratings = 5
 WHERE is_up_vote = true;
 
 ALTER TABLE rating DROP COLUMN is_up_vote;
+
+SELECT AVG (ratings) from rating where product_id = 6;
