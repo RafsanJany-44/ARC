@@ -71,14 +71,14 @@ alter table product rename column  votes to average_rating;
 
 
 ALTER TABLE rating
-ADD COLUMN rattings int(5) AFTER is_up_vote;
+ADD COLUMN ratings int(5) AFTER is_up_vote;
 
 UPDATE rating
-SET rattings = 1
+SET ratings = 1
 WHERE is_up_vote = false;
 
 UPDATE rating
-SET rattings = 5
+SET ratings = 5
 WHERE is_up_vote = true;
 
 ALTER TABLE rating DROP COLUMN is_up_vote;
