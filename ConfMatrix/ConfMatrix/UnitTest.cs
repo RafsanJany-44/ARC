@@ -92,4 +92,38 @@ public class TestClass{
         Assert.Equal(expectedF1Score,emty.f1Score());
     }
 
+    
+    
+    
+    
+// checking some failed test
+    
+    Calc cha=new Calc("a","34","b","56");
+   
+   [Fact]
+    public void FaildTestAccuracy4()
+    {
+        Assert.NotEqual(expectedAccuracy,cha.accuracy());
+    }
+    [Fact]
+    public void FaildTestPrecisio4()
+    {
+        Assert.NotEqual(expectedPrecision,cha.precision());
+    }
+    [Fact]
+    public void FaildTestSensitivity4()
+    {
+        Assert.NotEqual(expectedSensitivity,cha.sensitivity());
+    }
+    [Fact]
+    public void FaildTestSpecificity3()
+    {
+        Assert.NotEqual(expectedSpecificity,cha.specificity());
+    }
+    [Fact]
+    public void FaildTestF1Score4()
+    {
+        Assert.NotEqual(expectedF1Score,cha.f1Score());
+    }
+
 }
