@@ -67,8 +67,18 @@ call recalculate_product_votes();
 
 alter table vote rename to rating;
 alter table product rename column  votes to average_rating;
-#alter table rating rename column  is_up_vote to ratings;
+
 
 
 ALTER TABLE rating
 ADD COLUMN rattings int(5) AFTER is_up_vote;
+
+UPDATE rating
+SET rattings = 1
+WHERE is_up_vote = false;
+
+UPDATE rating
+SET rattings = 5
+WHERE is_up_vote = true;
+
+ALTER TABLE rating DROP COLUMN is_up_vote;
