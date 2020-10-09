@@ -1,3 +1,4 @@
+DROP DATABASE kids_shop;
 create database kids_shop;
 use kids_shop;
 
@@ -66,4 +67,8 @@ call recalculate_product_votes();
 
 alter table vote rename to rating;
 alter table product rename column  votes to average_rating;
-alter table rating rename column  is_up_vote to ratings;
+#alter table rating rename column  is_up_vote to ratings;
+
+
+ALTER TABLE rating
+ADD COLUMN rattings int(5) AFTER is_up_vote;
