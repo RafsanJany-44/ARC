@@ -35,6 +35,7 @@ public class TestClass{
         Assert.Equal(expectedF1Score,actual.f1Score());
     }
 
+
     Calc corrupt=new Calc("27","90","40","3");
 
     [Fact]
@@ -61,6 +62,34 @@ public class TestClass{
     public void TestF1Score2()
     {
         Assert.Equal(expectedF1Score,corrupt.f1Score());
+    }
+
+    Calc emty=new Calc("34","","6","");
+
+    [Fact]
+    public void TestAccuracy3()
+    {
+        Assert.Equal(expectedAccuracy,emty.accuracy());
+    }
+    [Fact]
+    public void TestPrecisio3()
+    {
+        Assert.Equal(expectedPrecision,emty.precision());
+    }
+    [Fact]
+    public void TestSensitivity3()
+    {
+        Assert.Equal(expectedSensitivity,emty.sensitivity());
+    }
+    [Fact]
+    public void TestSpecificity3()
+    {
+        Assert.Equal(expectedSpecificity,emty.specificity());
+    }
+    [Fact]
+    public void TestF1Score3()
+    {
+        Assert.Equal(expectedF1Score,emty.f1Score());
     }
 
 }
