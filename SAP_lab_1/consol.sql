@@ -83,7 +83,8 @@ WHERE is_up_vote = true;
 
 ALTER TABLE rating DROP COLUMN is_up_vote;
 
-SELECT AVG (ratings) from rating where product_id = 6;
+
+SELECT AVG (ratings) from rating where product_id = 3;
 
 delimiter //
 create procedure calculate_avg_rating()
@@ -94,8 +95,14 @@ begin
     WHILE x<=6
     Do
     SELECT AVG (ratings) from rating where product_id = x into a;
-    update product set average_rating=a where id=x;
+    IF a is null then
+        update product set average_rating = 0 where id=x;
+    Else
+        update product set average_rating = a where id=x;
+    end if;
     set x=x+1;
     End WHILE;
 end;//
 delimiter ;
+
+call calculate_avg_rating();
