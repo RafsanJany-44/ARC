@@ -1,0 +1,5 @@
+This will be wriiten in another file through pipe.....In real life pipe is used to set a connection...here is also pipe also is used for set a a
+connection...
+
+
+if you can read to another file...you are succesfull..
