@@ -65,13 +65,13 @@ call recalculate_product_votes();
 #--------------------------Task Starts------------------------
 
 
-alter table vote rename to rating;
-alter table product rename column  votes to average_rating;
+ALTER TABLE vote RENAME TO rating;
+ALTER TABLE product RENAME COLUMN  votes TO average_rating;
 
 
 
 ALTER TABLE rating
-ADD COLUMN ratings int(5) AFTER is_up_vote;
+ADD COLUMN ratings int(1) AFTER is_up_vote;
 
 UPDATE rating
 SET ratings = 1
@@ -86,23 +86,24 @@ ALTER TABLE rating DROP COLUMN is_up_vote;
 
 SELECT AVG (ratings) from rating where product_id = 3;
 
+
 delimiter //
-create procedure calculate_avg_rating()
-begin
-    declare a int;
-    DECLARE x INT;
-    SET x = 1;
-    WHILE x<=6
-    Do
-    SELECT AVG (ratings) from rating where product_id = x into a;
-    IF a is null then
-        update product set average_rating = 0 where id=x;
-    Else
-        update product set average_rating = a where id=x;
-    end if;
-    set x=x+1;
-    End WHILE;
-end;//
+CREATE PROCEDURE calculate_avg_rating()
+BEGIN 
+    DECLARE avaragr_rate INT;
+    DECLARE i INT;
+    SET i = 1;
+    WHILE i<=6
+    DO
+    SELECT AVG (ratings) from rating where product_id = i into avaragr_rate;
+    IF avaragr_rate IS NULL THEN
+        UPDATE product SET average_rating = 0 WHERE id=i;
+    ELSE
+        UPDATE product SET average_rating = avaragr_rate WHERE id=i;
+    END IF ;
+    SET i=i+1;
+    END WHILE;
+END;//
 delimiter ;
 
-call calculate_avg_rating();
+CALL calculate_avg_rating();
