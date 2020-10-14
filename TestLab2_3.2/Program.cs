@@ -25,6 +25,14 @@ namespace TestLab2_3._2
 
 
 
+        public static int vod_return(int num1,int num2){
+            int num3=0;
+            num3=num1+num2;
+            return num3;
+        }
+
+
+
 
     }
 }

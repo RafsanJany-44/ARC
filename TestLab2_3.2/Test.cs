@@ -7,4 +7,9 @@ public class Test{
         Assert.Equal(10,TestLab2_3._2.Program.findSum(4));
     }
 
+    [Fact]
+    public void test2(){
+        Assert.Equal(3,TestLab2_3._2.Program.vod_return(3,4));
+    }
+
 }
