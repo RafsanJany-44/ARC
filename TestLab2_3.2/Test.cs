@@ -12,4 +12,11 @@ public class Test{
         Assert.Equal(3,TestLab2_3._2.Program.vod_return(3,4));
     }
 
+
+
+    [Fact]
+    public void test3(){
+        Assert.Equal(5,TestLab2_3._2.Program.vod_return(3,4));
+    }
+
 }
