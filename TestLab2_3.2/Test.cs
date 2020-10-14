@@ -1,7 +1,8 @@
 using Xunit;
-class Test{
+public class Test{
     [Fact]
-    public void some_test(){
+    public void test1(){
+        
 
 
     }
