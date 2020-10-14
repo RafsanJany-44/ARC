@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/TestLab2_3.2.csproj": {}
+  },
+  "projects": {
+    "/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/TestLab2_3.2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/TestLab2_3.2.csproj",
+        "projectName": "TestLab2_3.2",
+        "projectPath": "/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/TestLab2_3.2.csproj",
+        "packagesPath": "/Users/rafsan/.nuget/packages/",
+        "outputPath": "/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rafsan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
