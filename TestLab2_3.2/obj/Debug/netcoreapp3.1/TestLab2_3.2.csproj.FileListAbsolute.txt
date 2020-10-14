@@ -1,0 +1,4 @@
+/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/obj/Debug/netcoreapp3.1/TestLab2_3.2.csprojAssemblyReference.cache
+/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/obj/Debug/netcoreapp3.1/TestLab2_3.2.AssemblyInfoInputs.cache
+/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/obj/Debug/netcoreapp3.1/TestLab2_3.2.AssemblyInfo.cs
+/Users/rafsan/Documents/GitHub/practice_cell/TestLab2_3.2/obj/Debug/netcoreapp3.1/TestLab2_3.2.csproj.CoreCompileInputs.cache
