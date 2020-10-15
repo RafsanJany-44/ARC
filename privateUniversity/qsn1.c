@@ -18,7 +18,6 @@ int BinSearch(int arr[], int l, int r, int x)
 } 
 
 int main(){
-    printf("\n-----------------------\n");
     int key;
     printf("Search Key: ");
     scanf("%d",&key);
@@ -33,5 +32,4 @@ int main(){
     {
         printf("%d is found",key);
     }
-    printf("\n-----------------------\n");
 }
