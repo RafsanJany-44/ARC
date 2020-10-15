@@ -14,9 +14,8 @@ int main(){
     u=factorial(n);
     v=factorial(m);
     x=factorial(m+n);
-    printf("%f %f %f",u,v,x);
-    result=u*(v/x);
-   // printf("Result= %f",result);
+    result=u*v/x;
+    printf("Result= %f",result);
 
 
 }
