@@ -1,6 +1,7 @@
+
+
+
 #include<stdio.h>
-
-
 int BinSearch(int arr[], int l, int r, int x) 
 { 
     if (r >= l) { 
