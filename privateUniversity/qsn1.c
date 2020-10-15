@@ -17,7 +17,7 @@ int BinSearch(int arr[], int l, int r, int x)
 
 int main(){
     int key;
-    printf("Search Key: ");
+    printf("Search key: ");
     scanf("%d",&key);
     int arr[] = {5,3,10,14,15}; 
     int n = sizeof(arr) / sizeof(arr[0]);
