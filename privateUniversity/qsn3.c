@@ -33,7 +33,7 @@ int main(){
         printf("\n");
     }
     printf("  ");
-    for(k=0;k<=n;k++){
+    for(k=0;k<=n-1;k++){
     printf("%c",c2);
     }
 }
