@@ -9,5 +9,14 @@ int factorial(int n){
 }
 
 int main(){
+    int m=3,n=2;
+    float result,u,v,x;
+    u=factorial(n);
+    v=factorial(m);
+    x=factorial(m+n);
+    printf("%f %f %f",u,v,x);
+    result=u*(v/x);
+   // printf("Result= %f",result);
+
 
 }
