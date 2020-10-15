@@ -9,13 +9,19 @@ int factorial(int n){
 }
 
 int main(){
-    int m=3,n=2;
+    int m,n;
+    printf("m=");
+    scanf("%d",&m);
+    printf("n=");
+    scanf("%d",&n);
+    if (m!=0 && n!=0){
     float result,u,v,x;
     u=factorial(n);
     v=factorial(m);
     x=factorial(m+n);
-    result=u*v/x;
+    result=(u*v)/x;
     printf("Result= %f",result);
+    }
 
 
 }
