@@ -19,17 +19,19 @@ int BinSearch(int arr[], int l, int r, int x)
 
 int main(){
     printf("\n-----------------------\n");
+    int key;
+    printf("Search Key: ");
+    scanf("%d",&key);
     int arr[] = {5,3,10,14,15}; 
-    int n = sizeof(arr) / sizeof(arr[0]); 
-    int key = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
     int find = BinSearch(arr, 0, n - 1, key); 
     if (find==-1)
     {
-          printf("%d is not found",find);
+        printf("%d is not found",key);
     }
     else
     {
-        printf("%d is found",find);
+        printf("%d is found",key);
     }
     printf("\n-----------------------\n");
 }
