@@ -5,10 +5,8 @@ int BinSearch(int arr[], int l, int r, int x)
 { 
     if (r >= l) { 
         int mid = l + (r - l) / 2; 
-  
         if (arr[mid] == x) 
             return mid; 
-  
         if (arr[mid] > x) 
             return BinSearch(arr, l, mid - 1, x); 
 
