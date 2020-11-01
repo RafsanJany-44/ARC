@@ -35,11 +35,11 @@ const  NotificationScreen =({navigation})=> {
                     backgroundColor: '#DAF7A6',
                     justifyContent: 'space-around',
                 }}
-                    leftComponent={<Ionicons name="md-menu" size={25} color="white" onPress={()=>{
+                    leftComponent={<Ionicons name="md-menu" size={25} color="#6C9800" onPress={()=>{
                         navigation.openDrawer();
                     }}/>}
-                    centerComponent={{ text: 'Notification', style: {fontSize:20, color: '#fff' } }}
-                    rightComponent={<Ionicons name="md-lock" size={25} color="white" 
+                    centerComponent={{ text: 'Notification', style: {fontSize:20, color: '#6C9800' } }}
+                    rightComponent={<Ionicons name="md-lock" size={25} color="#6C9800" 
                     onPress={()=>{
                         auth.setisLogged(false);
                         auth.setcurrentUser({});
