@@ -22,7 +22,7 @@ const ProfileScreen =({navigation})=>{
                 <StatusBar style="light"/>
                 <Header
                     containerStyle={{
-                    backgroundColor: '#14274e',
+                    backgroundColor: '#DAF7A6',
                     justifyContent: 'space-around',}}
                     leftComponent={<Ionicons name="md-menu" size={25} color="white" onPress={()=>{
                         navigation.openDrawer();
@@ -60,25 +60,26 @@ const ProfileScreen =({navigation})=>{
                     paddingHorizontal:30,
                     marginBottom:25,}}>   
                 <View style={styles.row}>
-                    <Feather name="map-pin" size={24} color="#777777" />
-                    <Text style={{marginLeft:20,color:"#777777"}}>{auth.currentUser.location==null?"No value set yet":"Stays at "+auth.currentUser.location}</Text>
+                    <Feather name="map-pin" size={24} color="#6C9800" />
+                    <Text style={{marginLeft:20,color:"#6C9800"}}>{auth.currentUser.location==null?"No value set yet":"Stays at "+auth.currentUser.location}</Text>
                 </View>
                 <View style={styles.row}>
-                <FontAwesome name="birthday-cake" size={24} color="#777777" />
-                    <Text style={{marginLeft:20,color:"#777777"}}>{auth.currentUser.bday==null?"No value set yet":"Born on "+auth.currentUser.bday}</Text>
+                <FontAwesome name="birthday-cake" size={24} color="#6C9800" />
+                    <Text style={{marginLeft:20,color:"#6C9800"}}>{auth.currentUser.bday==null?"No value set yet":"Born on "+auth.currentUser.bday}</Text>
                 </View>
                 <View style={styles.row}>
-                    <FontAwesome name="institution" size={24} color="#777777" />
-                    <Text style={{marginLeft:20,color:"#777777"}}>{auth.currentUser.works==null?"No value set yet":"Works at "+auth.currentUser.works}</Text>
+                    <FontAwesome name="institution" size={24} color="#6C9800" />
+                    <Text style={{marginLeft:20,color:"#6C9800"}}>{auth.currentUser.works==null?"No value set yet":"Works at "+auth.currentUser.works}</Text>
                 </View>
                 <View style={styles.row}>
-                    <AntDesign name="idcard" size={25} color="#777777" />
-                    <Text style={{marginLeft:20,color:"#777777"}}>{auth.currentUser.id}</Text>
+                    <AntDesign name="idcard" size={25} color="#6C9800" />
+                    <Text style={{marginLeft:20,color:"#6C9800"}}>{auth.currentUser.id}</Text>
                 </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
                     <Button
-                    icon={<Ionicons name="md-settings" size={24} color="#0388fc" />}
+                    icon={<Ionicons name="md-settings" size={24} color="#6C9800" />}
+                    buttonStyle={{backgroundColor:'#00F7E7'}}
                     containerStyle={{width:150,marginLeft:20,marginRight:20}}
                     titleStyle={{marginLeft:5}}
                     title="Settings"
@@ -88,7 +89,7 @@ const ProfileScreen =({navigation})=>{
                     }}
                     />
                     <Button
-                    icon={<AntDesign name="deleteuser" size={24} color="white" />}
+                    icon={<AntDesign name="deleteuser" size={24} color="#6C9800" />}
                     buttonStyle={{backgroundColor:'#e02f2f'}}
                     containerStyle={{width:150,marginLeft:30,marginRight:10,}}
                     titleStyle={{marginLeft:5}}
