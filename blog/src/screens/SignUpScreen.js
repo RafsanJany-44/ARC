@@ -7,16 +7,6 @@ import {storeDataJSON} from './../functions/AsyncStorageFunctions';
 import * as Animatable from 'react-native-animatable';
 
 
-// function validateEmail (email) {
-// let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (reg.test(email) === false){
-//       return true;
-//   }
-//   else {
-//       return false;
-//   }
-// }
-
 const SignupScreen =(props)=> {
     let [name,setName]=useState("");
     let [studentID,setStudentID]=useState("");
@@ -40,14 +30,14 @@ const SignupScreen =(props)=> {
             barStyle="light-content"/>
             <ImageBackground
             style={styles.image}
-            source={{uri:'http://picsum.photos/id/474/4288/2848'}}>
-            <Text style={styles.text}>TRAVELS</Text>
+            source={{uri:'https://picsum.photos/seed/picsum/4288/2848'}}>
+            <Text style={styles.text}>KRITTM Social</Text>
             <Animatable.View animation="fadeInUpBig" delay={2}>
-                         <Card containerStyle={styles.card}>
+                <Card containerStyle={styles.card}>
                 <Card.Title style={{fontSize:20}}>Sign Up</Card.Title>
                 <Card.Divider />
                 <Input 
-                leftIcon={<Ionicons name="ios-person" size={24} color="black" />}
+                leftIcon={<Ionicons name="ios-person" size={24} color="#6C9800" />}
                 placeholder="Username" 
                 onChangeText={function (input) {
                     setName(input);
@@ -55,12 +45,12 @@ const SignupScreen =(props)=> {
                 />
                 <Input
                 keyboardType = 'numeric' 
-                leftIcon={<Ionicons name="md-school" size={24} color="black" />}
+                leftIcon={<Ionicons name="md-school" size={24} color="#6C9800" />}
                 placeholder="StudentID" onChangeText={function (input) {
                     setStudentID(input);
                 }}/>
                 <Input
-                leftIcon={<MaterialIcons name="mail-outline" size={24} color="black"/>}
+                leftIcon={<MaterialIcons name="mail-outline" size={24} color="#6C9800"/>}
                 placeholder="E-mail Address"
                 errorStyle={{ color: 'red' }}
                 onChangeText={function (input) {
@@ -71,7 +61,7 @@ const SignupScreen =(props)=> {
                 />
                 <Input 
                 containerStyle={{paddingBottom:20}}
-                leftIcon={<MaterialIcons name="vpn-key" size={24} color="black"/>}
+                leftIcon={<MaterialIcons name="vpn-key" size={24} color="#6C9800"/>}
                 placeholder="Password" 
                 secureTextEntry={true} onChangeText={function (input) {
                     setPassword(input);
@@ -128,7 +118,7 @@ const styles=StyleSheet.create({
     text:{
         textAlignVertical: "center",
         textAlign: "center",
-        color:"#FFFFFF",
+        color:"#DAF7A6",
         fontSize:30,
         paddingBottom:10,
     },
