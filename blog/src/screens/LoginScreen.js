@@ -22,7 +22,7 @@ const LoginScreen =(props)=> {
                 <ImageBackground
                 style={styles.image}
                 source={{uri:'http://picsum.photos/id/474/4288/2848'}}>
-                <Text style={styles.text}>TRAVELS</Text>
+                <Text style={styles.text}>Krittim</Text>
                 <Animatable.View animation="fadeInUpBig" delay={2}>
                     <Card containerStyle={styles.card} >
                     <Card.Title style={{fontSize:20}}>Log In</Card.Title>
@@ -95,7 +95,7 @@ const styles=StyleSheet.create({
         paddingBottom:10,
     },
     card:{
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backgroundColor: '#DAF7A6',
         fontFamily:"san-serif",
         borderRadius:10
     }
