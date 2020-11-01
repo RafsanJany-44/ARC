@@ -21,8 +21,8 @@ const LoginScreen =(props)=> {
                 barStyle="light-content"/>
                 <ImageBackground
                 style={styles.image}
-                source={{uri:'http://picsum.photos/id/474/4288/2848'}}>
-                <Text style={styles.text}>KRITTM</Text>
+                source={{uri:'https://picsum.photos/seed/picsum/4288/2848'}}>
+                <Text style={styles.text}>KRITTM Social</Text>
                 <Animatable.View animation="fadeInUpBig" delay={2}>
                     <Card containerStyle={styles.card} >
                     <Card.Title style={{fontSize:20}}>Log In</Card.Title>
@@ -90,7 +90,7 @@ const styles=StyleSheet.create({
     text:{
         textAlignVertical: "center",
         textAlign: "center",
-        color:"#40e0d0",
+        color:"#DAF7A6",
         fontSize:30,
         paddingBottom:10,
     },
