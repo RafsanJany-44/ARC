@@ -33,7 +33,7 @@ const HomeScreenTab=()=> {
   return(
     <HomeTab.Navigator 
     initialRouteName="Home"
-      activeColor="#FFFFFF"
+      activeColor="#6C9800"
       shifting={true}>
       <HomeTab.Screen name="Home" 
         component={HomeScreen}
