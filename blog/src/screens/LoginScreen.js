@@ -22,19 +22,19 @@ const LoginScreen =(props)=> {
                 <ImageBackground
                 style={styles.image}
                 source={{uri:'http://picsum.photos/id/474/4288/2848'}}>
-                <Text style={styles.text}>Krittim</Text>
+                <Text style={styles.text}>KRITTM</Text>
                 <Animatable.View animation="fadeInUpBig" delay={2}>
                     <Card containerStyle={styles.card} >
                     <Card.Title style={{fontSize:20}}>Log In</Card.Title>
                     <Card.Divider />
                     <Input
-                    leftIcon={<MaterialIcons name="mail-outline" size={24} color="black"/>}
+                    leftIcon={<MaterialIcons name="mail-outline" size={24} color="#40e0d0"/>}
                     placeholder="E-mail Address"
                     onChangeText={function (input) {
                     setEmail(input);
                 }}/>
                     <Input 
-                    leftIcon={<MaterialIcons name="vpn-key" size={24} color="black"/>}
+                    leftIcon={<MaterialIcons name="vpn-key" size={24} color="#40e0d0"/>}
                     placeholder="Password" 
                     secureTextEntry={true} 
                     onChangeText={function (input) {
@@ -90,7 +90,7 @@ const styles=StyleSheet.create({
     text:{
         textAlignVertical: "center",
         textAlign: "center",
-        color:"#FFFFFF",
+        color:"#40e0d0",
         fontSize:30,
         paddingBottom:10,
     },
