@@ -5,10 +5,10 @@ create table customer (
 );
 
 insert into customer (name) values
-    ('Rafsan Jany'),
-    ('Ratun Rahman'),
-    ('Akib Ahmed'),
-    ('Rafid Islam');
+    ('Leo Nardo'),
+    ('Rafael'),
+    ('Dona Telo'),
+    ('Michel Angelo');
 
 alter table rating add column customer_id int;
 -- alter table rating add column date_time datetime;
