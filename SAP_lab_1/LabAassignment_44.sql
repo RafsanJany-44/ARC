@@ -1,7 +1,7 @@
 -- Task A1
 create table customer (
     id int not null auto_increment primary key,
-    name varchar(100)
+    name varchar(50)
 );
 
 insert into customer (name) values
@@ -11,8 +11,6 @@ insert into customer (name) values
     ('Michel Angelo');
 
 alter table rating add column customer_id int;
--- alter table rating add column date_time datetime;
--- alter table rating rename column date_time to timestamp;
 alter table rating add column timestamp datetime;
 
 
