@@ -1,4 +1,4 @@
--- Task A1
+-----------------------Task A1-------------------------
 create table customer (
     id int not null auto_increment primary key,
     name varchar(50)
@@ -14,7 +14,7 @@ alter table rating add column customer_id int;
 alter table rating add column timestamp datetime;
 
 
--- Task A2
+------------------------Task A2--------------------
 create table employee (
     id int not null auto_increment primary key,
     name varchar(10)
@@ -41,14 +41,14 @@ create table sale (
 );
 
 
--- Task B1
+------------------------Task B1------------------------
 select name
 from product
 order by product.average_rating desc
 limit 3;
 
 
--- Task B1a and B2a
+------------------------Task B1a and B2a------------------------
 alter table category add column AverageRating float;
 alter table category add column TotalSale int;
 alter table product add column TotalSale int;
@@ -59,7 +59,7 @@ alter table invoice add column TotalPrice float;
 alter table employee add column TotalSale int;
 
 
--- Task B1b
+------------------------Task B1b------------------------
 drop procedure if exists add_rating;
 delimiter //
 create procedure add_rating(in product_id int, in rating_value int, in customer_id int)
@@ -69,7 +69,7 @@ end;//
 delimiter ;
 
 
--- Task B1c
+------------------------Task B1c------------------------
 drop procedure if exists calculate_product_average_rating;
 delimiter //
 create procedure calculate_product_average_rating(in product_id int)
@@ -82,7 +82,7 @@ delimiter ;
 
 
 
--- Task B2
+------------------------Task B2------------------------
 select category.name, count(count) as TotalSale
 from sale join category
 where sale.SellerId=1
@@ -90,7 +90,7 @@ and sale.CategoryId=category.id
 group by sale.CategoryId;
 
 
--- Task B2b
+------------------------Task B2b------------------------
 drop procedure if exists get_sale_per_category;
 delimiter //
 create procedure get_sale_per_category(in employee_id int)
@@ -103,7 +103,7 @@ delimiter ;
 
 
 
--- Task B2c
+------------------------Task B2c------------------------
 drop procedure if exists set_product_category;
 delimiter //
 create procedure set_product_category(in product_id int, in category_id int)
@@ -116,7 +116,7 @@ delimiter ;
 
 
 
--- Task C1a
+------------------------Task C1a------------------------
 create table reporting_database_customer(
     id int auto_increment primary key ,
     name varchar(50)
@@ -142,7 +142,7 @@ create table reporting_database_rating(
 );
 
 
--- Task C1b
+------------------------Task C1b------------------------
 drop procedure if exists get_top_3_products;
 delimiter  //
 create procedure get_top_3_products()
@@ -160,7 +160,7 @@ delimiter ;
 
 
 
--- Task C1c
+------------------------Task C1c------------------------
 drop procedure if exists get_top_2_categories;
 delimiter  //
 create procedure get_top_2_categories()
@@ -178,7 +178,7 @@ delimiter ;
 
 
 
--- Task C1d
+------------------------Task C1d------------------------
 drop procedure if exists get_frequent_rater;
 delimiter  //
 create procedure get_frequent_rater()
@@ -195,7 +195,7 @@ delimiter ;
 
 
 
--- Task C1e
+------------------------Task C1e------------------------
 drop procedure if exists get_top_product_by_duration;
 delimiter  //
 create procedure get_top_product_by_duration(in start_date date, in end_date date)
@@ -213,7 +213,7 @@ delimiter ;
 
 
 
--- Task C1f
+------------------------Task C1f------------------------
 drop procedure if exists get_top_product_by_category;
 delimiter  //
 create procedure get_top_product_by_category(in category_id int)
@@ -232,7 +232,7 @@ delimiter ;
 
 
 
--- Task C1g
+------------------------Task C1g------------------------
 drop procedure if exists populate_reporting_db;
 delimiter  //
 create procedure populate_reporting_db()
