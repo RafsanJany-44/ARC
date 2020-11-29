@@ -17,7 +17,7 @@ alter table rating add column timestamp datetime;
 -- Task A2
 create table employee (
     id int not null auto_increment primary key,
-    name varchar(100)
+    name varchar(10)
 );
 insert into employee (name) values
     ('Mr A'),
@@ -128,17 +128,17 @@ delimiter ;
 -- Task C1a
 create table reporting_database_customer(
     id int auto_increment primary key ,
-    name varchar(100)
+    name varchar(50)
 );
 
 create table reporting_database_category(
     id int auto_increment primary key ,
-    name varchar(100)
+    name varchar(50)
 );
 
 create table reporting_database_product(
     id int auto_increment primary key,
-    name varchar(100),
+    name varchar(50),
     reporting_database_category_id int
 );
 
