@@ -196,21 +196,8 @@ delimiter ;
 
 
 ------------------------Task C1e------------------------
-drop procedure if exists get_top_product_by_duration;
-delimiter  //
-create procedure get_top_product_by_duration(in start_date date, in end_date date)
-begin
-    select name from
-    (select reporting_database_product.name, avg(reporting_database_rating.value) as averageRating
-    from reporting_database_product join reporting_database_rating
-    where reporting_database_product_id= reporting_database_product.id
-    and date(datetime) between start_date and end_date
-    group by reporting_database_product_id
-    order by averageRating desc
-    limit 1) as T;
-end; //
-delimiter ;
 
+-- this task has been skiped 
 
 
 ------------------------Task C1f------------------------
