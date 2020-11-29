@@ -67,7 +67,6 @@ begin
     insert into rating(product_id, value, customer_id, timestamp) values (product_id, rating_value, customer_id, NOW());
 end;//
 delimiter ;
- -- call add_rating(1,1,2);
 
 
 -- Task B1c
@@ -80,7 +79,6 @@ begin
     where product.id=product_id;
 end;//
 delimiter ;
--- call calculate_product_average_rating(1);
 
 
 
@@ -103,7 +101,6 @@ begin
 end;//
 delimiter ;
 
--- call get_sale_per_category(1);
 
 
 -- Task B2c
@@ -116,8 +113,6 @@ begin
     where product.id=product_id;
 end;//
 delimiter ;
-
--- call set_product_category(6, 4);
 
 
 
@@ -162,7 +157,6 @@ begin
     limit 3) as T;
 end; //
 delimiter ;
--- call get_top_3_products();
 
 
 
@@ -181,7 +175,6 @@ begin
     limit 2) as T;
 end; //
 delimiter ;
--- call get_top_2_categories();
 
 
 
@@ -199,7 +192,6 @@ begin
     limit 1)as T;
 end; //
 delimiter ;
--- call get_frequent_rater();
 
 
 
@@ -218,7 +210,6 @@ begin
     limit 1) as T;
 end; //
 delimiter ;
--- call get_top_product_by_duration(str_to_date('21,5,2013','%d,%m,%Y'), str_to_date('21,5,2021','%d,%m,%Y'));
 
 
 
@@ -238,7 +229,7 @@ begin
     limit 1) as T;
 end; //
 delimiter ;
--- call get_top_product_by_category(1);
+
 
 
 -- Task C1g
