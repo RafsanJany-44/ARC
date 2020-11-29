@@ -91,10 +91,6 @@ where sale.SellerId=1
 and sale.CategoryId=category.id
 group by sale.CategoryId;
 
--- insert into sale (invoice_id, product_id, unit_price, count, DateTime, SellerId, CategoryId) values (1,1,1,1,now(),1,1);
--- insert into sale (invoice_id, product_id, unit_price, count, DateTime, SellerId, CategoryId) values (1,3,1,1,now(),1,3);
--- delete from sale;
-
 
 -- Task B2b
 drop procedure if exists get_sale_per_category;
