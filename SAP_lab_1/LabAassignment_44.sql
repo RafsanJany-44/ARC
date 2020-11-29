@@ -20,10 +20,10 @@ create table employee (
     name varchar(10)
 );
 insert into employee (name) values
-    ('Mr A'),
-    ('Mr B'),
-    ('Mr C'),
-    ('Mr D');
+    ('Albert Einstein'),
+    ('Newton'),
+    ('Tesla'),
+    ('Farade');
 
 create table invoice (
     id int not null auto_increment primary key,
