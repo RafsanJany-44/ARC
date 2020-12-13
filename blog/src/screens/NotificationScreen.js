@@ -5,6 +5,7 @@ import {AuthContext} from '../providers/AuthProvider';
 import { Ionicons} from '@expo/vector-icons';
 import { getDataJSON } from "./../functions/AsyncStorageFunctions";
 import  ShowNotification  from "./../components/NotifactionShow";
+import * as firebase from "firebase";
 
 
 const  NotificationScreen =({navigation})=> {
@@ -13,7 +14,12 @@ const  NotificationScreen =({navigation})=> {
 
     const getNotification = async ()=>{
         setReload(true)
-        let notify=await getDataJSON('notification');
+        firebase.auth().signInWithEmailAndPassword(Email, Password).then((userCreds) => {
+            auth.setIsLoggedIn(true);
+            auth.setCurrentUser(userCreds.posts);
+        }).catch((error) => {
+            alert(error);
+        })
         if(notify!=null ){
             setNotification(notify);
         }

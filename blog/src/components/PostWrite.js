@@ -41,6 +41,7 @@ const PostWrite=({user})=>{
                         likecount:0,
                         }
                         storeDataJSON("post"+id,newPost);
+                        alert(posts.id)
                         setPost("");
                         input.current.clear();
                     }

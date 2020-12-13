@@ -6,6 +6,7 @@ import { AntDesign,MaterialIcons  } from '@expo/vector-icons';
 import {AuthContext} from './../providers/AuthProvider';
 import {getDataJSON} from './../functions/AsyncStorageFunctions';
 import * as Animatable from 'react-native-animatable';
+import * as firebase from "firebase";
 
 const LoginScreen =(props)=> {
     let [email,setEmail]=useState("");
@@ -46,18 +47,12 @@ const LoginScreen =(props)=> {
                     title="Log In!"
                     type="solid"
                     onPress={async ()=>{
-                        if(email.length!=0 && password.length!=0)
-                        {
-                            let user= await getDataJSON(email);
-                            if(user.password==password)
-                            {
-                                auth.setisLogged(true);
-                                auth.setcurrentUser(user);
-                            }
-                            else
-                                alert("Login credentials Invalid"); 
-                        }else
-                            alert("Please Enter Login Credentials"); 
+                        firebase.auth().signInWithEmailAndPassword(Email, Password).then((userCreds) => {
+                            auth.setIsLoggedIn(true);
+                            auth.setCurrentUser(userCreds.user);
+                        }).catch((error) => {
+                            alert(error);
+                        })
                     }}
                     />
                     <Button

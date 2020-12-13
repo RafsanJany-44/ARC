@@ -13,7 +13,21 @@ import {AuthProvider,AuthContext} from './src/providers/AuthProvider';
 import NotificationScreen from './src/screens/NotificationScreen';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import ProfileScreen from './src/screens/ProfieScreen';
+import * as firebase from "firebase";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCdJA1m9wMwIt2uu4S3apEvigFJe0QUjS4",
+  authDomain: "KrittimSocial-d5f78.firebaseapp.com",
+  databaseURL: "https://KrittimSocial-d5f78.firebaseio.com",
+  projectId: "KrittimSocial-d5f78",
+  storageBucket: "KrittimSocial-d5f78.appspot.com",
+  messagingSenderId: "541859601318",
+  appId: "1:541859601318:web:3y547ft4s5c26f47f90d54"
+};
+
+if(!firebase.apps.length){
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Authstack = createStackNavigator();
 const Notificationstack = createStackNavigator();
