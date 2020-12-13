@@ -91,7 +91,7 @@ const SinglePostScreen=({navigation,route})=>{
                             </Button>
                             <Text>{postDetails.likecount}</Text>
                         </Left>
-                        
+                    
                     </CardItem>
                     </Card>
                         <WriteComment user={auth.currentUser.name} postDetails={postDetails}/>
@@ -110,8 +110,6 @@ const SinglePostScreen=({navigation,route})=>{
         </AuthContext.Consumer>
     );
 
-
-};
 
 const styles = StyleSheet.create({
     container:{
