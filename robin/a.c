@@ -9,17 +9,17 @@ int main()
 
     for(i=1; i<=n; i++)
     {
-        for(j=i; j<n; j++)
+        for(j=i*2; j<2*n; j++)
         {
             printf(" ");
         }
-
         
         for(j=1; j<=i; j++)
         {
             printf("%d", i);
+            printf(" ");
+            
         }
-
         printf("\n");
     }
 
