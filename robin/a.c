@@ -1,29 +1,27 @@
 #include <stdio.h>
-    int main ()
+
+int main()
+{
+    int i, j, n;
+
+    printf("Base Length: ");
+    scanf("%d", &n);
+
+    for(i=1; i<=n; i++)
     {
-        float n[10];
-        int i, j, a;
-        printf("Enter the numbers \n");
-        for (i = 0; i < 10; ++i)
-	        scanf("%f", &n[i]);
-        for (i = 0; i < 10; ++i) 
+        for(j=i; j<n; j++)
         {
-            for (j = i + 1; j < 10; ++j) 
-            {
-                if (n[i] < n[j]) 
-                {
-                    a = n[i];
-                    n[i] = n[j];
-                    n[j] = a;
-                }
-            }
+            printf(" ");
         }
- 
-        printf("The numbers arranged in descending order are given below\n");
- 
-        for (i = 0; i < 10; ++i) 
+
+        
+        for(j=1; j<=i; j++)
         {
-            printf("%f ", n[i]);
+            printf("%d", i);
         }
- 
+
+        printf("\n");
     }
+
+    return 0;
+}
