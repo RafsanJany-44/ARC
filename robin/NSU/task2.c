@@ -10,7 +10,7 @@ float Final_Exam_score;
 float Total_score;
 };
 
-int passCount(struct student st[],int n){
+int failCount(struct student st[],int n){
     int i,count=0;
     float total=0;
     for(i=0;i<n;i++){
@@ -59,7 +59,7 @@ int main(){
     scanf("%f",&st[i].Final_Exam_score);    
     }
 
-    printf("\nNumber of Failed Student: %d ",passCount(st,N));
+    printf("\nNumber of Failed Student: %d ",failCount(st,N));
     printf("\nID of the student obtaining the highest marks: %d \n",highest_marks(st,N));
 
 }
