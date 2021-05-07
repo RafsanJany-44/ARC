@@ -2,7 +2,7 @@
 #include<string.h>
 struct movieStar
 {
-//char Name[30];
+char Name[30];
 int Age;
 float Annual_Income;
 char Gender;
@@ -40,8 +40,8 @@ int main(){
     struct movieStar ms[N];    
     printf("Enter Records of %d Film Star:",N);    
     for(i=0;i<N;i++){    
-    //printf("\nEnter Name:");    
-   // get(ms[i].Name);    
+    printf("\nEnter Name:");    
+    get(ms[i].Name);    
     printf("\nEnter Annual Income:");    
     scanf("%f",&ms[i].Annual_Income);    
     printf("\nEnter Age:");    
