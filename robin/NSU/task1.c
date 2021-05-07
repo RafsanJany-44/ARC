@@ -1,63 +1,54 @@
 #include<stdio.h>
 
-struct student
+struct movieStar
 {
-int ID;
+char Name[30];
+int Age;
+float Annual_Income;
 char Gender;
-float Class_test_score;
-float Mid_term_score;
-float Final_Exam_score;
-float Total_score;
 };
 
-
-int passCount(struct student st[],int n){
-    int i,count=0;
-    float total=0;
-    for(i=0;i<n;i++){
-        total=st[i].Class_test_score+st[i].Mid_term_score+st[i].Final_Exam_score;
-        if(total<60){
-            count++;
-        }
-        total=0;
-    }
-    return count;
-}
-
-int highest_marks(struct student st[],int n){
-    int i,max=0,index;
+float highest_annual_earning(struct movieStar ms[],int n){
+    int i,max=0;
     float total;
     for(i=0;i<n;i++){
-        total=st[i].Class_test_score+st[i].Mid_term_score+st[i].Final_Exam_score;
-        if(total>max){
-            max=total;
-            index=i;
+        if(ms[i].Annual_Income>max){
+            max=ms[i].Annual_Income;
         }
-        total=0;
     }
-    return st[index].ID;
+    return max;
+}
+
+int youngStar(struct movieStar ms[],int n){
+    int i,min=ms[i].Age;
+    float total;
+    for(i=0;i<n;i++){
+        if(ms[i].Age<min){
+            min=ms[i].Age;
+        }
+    }
+    return min;
 }
 
 
 int main(){
 
     int N,i;
-    printf("Enter the number of stdents: ");
+    printf("Enter the number of Film Star: ");
     scanf("%d",&N);
     
-    struct student st[N];    
-    printf("Enter Records of 5 students");    
+    struct movieStar ms[N];    
+    printf("Enter Records of %d Film Star:",N);    
     for(i=0;i<N;i++){    
-    printf("\nEnter Student ID:");    
-    scanf("%d",&st[i].ID);    
-    printf("\nEnter Student Gender:");    
-    scanf(" %c",&st[i].Gender);
-    printf("\nEnter Class_test_score:");    
-    scanf("%f",&st[i].Class_test_score);    
-    printf("\nEnter Mid_term_score:");    
-    scanf("%f",&st[i].Mid_term_score);
-    printf("\nFinal_Exam_score:");    
-    scanf("%f",&st[i].Final_Exam_score);    
+    printf("\nEnter Name:");    
+    get(ms[i].Name);    
+    printf("\nEnter Annual Income:");    
+    scanf("%f",&ms[i].Annual_Income);    
+    printf("\nEnter Age:");    
+    scanf("%d",&ms[i].Age);
+    printf("\nEnter Gender:");    
+    scanf(" %c",&ms[i].Gender);
+    
     }
 
     printf("\nNumber of Failed Student: %d ",passCount(st,N));
