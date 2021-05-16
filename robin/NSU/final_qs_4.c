@@ -26,6 +26,10 @@ int main()
         if (fileAddress != NULL) {
             while ((ch[i] = fgetc(filePointer)) != EOF)
             {       
+                if( ch[i] >= 'a' && ch[i] <= 'z' )
+                    {
+                    ch[i] = ch[i] - 32;
+                    }
                 fputc (ch[i], fileAddress);
                 i++;
             }
