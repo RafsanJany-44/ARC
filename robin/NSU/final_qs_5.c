@@ -10,40 +10,41 @@ char Gender;
 };
 
 //c
-float highest_annual_earning(struct movieStar ms[],int n){
-    int i,max=0;
+float highestEearning(struct movieStar s[],int n){
+    int i,income=0;
     
     for(i=0;i<n;i++){
-        if(ms[i].Annual_Income>max){
-            max=ms[i].Annual_Income;
+        if(s[i].Annual_Income>income){
+            income=s[i].Annual_Income;
         }
     }
-    return max;
+    return income;
 }
 
 //d
-int youngStar(struct movieStar ms[],int n){
-    int i,min=ms[i].Age;
+int youngStar(struct movieStar a[],int n){
+    int i,s=a[i].Age;
     
     for(i=0;i<n;i++){
-        if(ms[i].Age<min){
-            min=ms[i].Age;
+        if(a[i].Age<s){
+            s=a[i].Age;
         }
     }
-    return min;
+    return s;
 }
 
 
 int main(){
 
-    int N,i;
+    int N,i=0;
     //b
     printf("Enter the number of Film Star: ");
     scanf("%d",&N);
     
     struct movieStar ms[N];    
     printf("Enter Records of %d Film Star:",N);    
-    for(i=0;i<N;i++){    
+    
+    while(i<N){    
     printf("\nEnter Name:");    
     get(ms[i].Name);    
     printf("\nEnter Annual Income:");    
@@ -52,10 +53,10 @@ int main(){
     scanf("%d",&ms[i].Age);
     printf("\nEnter Gender:");    
     scanf(" %c",&ms[i].Gender);
-    
+    i++;
     }
 
-    printf("\nHighest Annual Earning: %.2f ",highest_annual_earning(ms,N));
+    printf("\nHighest Earning: %f ",highestEarning(ms,N));
     printf("\nAge of Young Actor: %d \n",youngStar(ms,N));
 
 }

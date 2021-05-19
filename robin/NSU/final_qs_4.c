@@ -3,47 +3,46 @@
 #include <string.h>
 int main()
 {
-    char file1[100],file2[100];
-    printf("Enter the source file name: ");
-    gets(file1);
-    printf("Enter the destination file name: ");
-    gets(file2);
-    FILE *filePointer;
-    char ch[10000];
-    filePointer = fopen(file1, "r");
-    if (filePointer == NULL)
+    char f1[100],f2[100];
+    printf("Enter the 1st file name: ");
+    gets(f1);
+    printf("Enter the 2nd file name: ");
+    gets(f2);
+    FILE *file1;
+    char c[10000];
+    file1 = fopen(f1, "r");
+    if (file1 == NULL)
     {
-        printf("File %s is not available \n",file1);
+        printf("File %s is not available \n",f1);
         return 0;
     }
     else
     {
 
         int i=0;
-        FILE *fileAddress;
-        fileAddress = fopen(file2, "w");
+        FILE *file2;
+        file2 = fopen(f2, "w");
 
-        if (fileAddress != NULL) {
-            while ((ch[i] = fgetc(filePointer)) != EOF)
+        if (file2 != NULL) {
+            while ((c[i] = fgetc(file1)) != EOF)
             {       
-                if( ch[i] >= 'a' && ch[i] <= 'z' )
+                if( c[i] >= 'a' && c[i] <= 'z' )
                     {
-                    ch[i] = ch[i] - 32;
+                    c[i] = c[i] - 32;
                     }
-                fputc (ch[i], fileAddress);
+                fputc (c[i], file2);
                 i++;
             }
-            fclose(fileAddress);		
+            fclose(file2);		
         }
         else {
-            printf("File %s is not available \n",file2);
-            fclose(filePointer);
+            printf("File %s is not available \n",f2);
+            fclose(file1);
             return 0;
         }
                 
     }
-    printf("File Coping Successed.\n");
-    fclose(filePointer);
+    fclose(file1);
 
 
     return 0;

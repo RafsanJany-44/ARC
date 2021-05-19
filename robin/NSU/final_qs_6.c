@@ -1,26 +1,26 @@
 #include <stdio.h>
 int main() {
-  int N, a[100][100], i, j;
-  printf("Enter dimenssion of array (NxN):");
-  scanf("%d", &N);
-  for (i = 0; i < N; ++i){
-    for (j = 0; j < N; ++j) {
+  int n, mat[100][100], i, j;
+  printf("Enter dimenssion(NxN):");
+  scanf("%d", &n);
+  for (i = 0; i < n; ++i){
+    for (j = 0; j < n; ++j) {
         if(i==j){
-            a[i][j]=0;
+            mat[i][j]=0;
         }
-        else{a[i][j]=-1;}
+        else{mat[i][j]=-1;}
       
     }
   }
   
-  for(i=0;i<N;i++){
-      for(j=i+1;j<N;j++){
-          a[i][j]=1;
+  for(i=0;i<n;i++){
+      for(j=i+1;j<n;j++){
+          mat[i][j]=1;
       }
   }
-  for (i = 0; i < N; ++i){
-    for (j = 0; j < N; ++j) {
-      printf("%d ", a[i][j]);
+  for (i = 0; i < n; ++i){
+    for (j = 0; j < n; ++j) {
+      printf("%d ", mat[i][j]);
     }
     printf("\n");
   }
