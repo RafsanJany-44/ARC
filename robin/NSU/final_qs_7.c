@@ -1,6 +1,17 @@
+
+
 #include<stdio.h>
 int main(){
-    int a=70, b=20;
+
+
+    printf("(i) 516 \n");
+    printf("(ii) 500\n");
+    printf("(iii) 12\n");
+    printf("(iv) 3\n");
+    printf("(v)8\n");
+
+    
+    /*int a=70, b=20;
     int *p,*q;
     p=&b;printf("Line 5: value of p-> %d\n",p);
     q=&a;printf("Line 6: value of q-> %d\n",q);
@@ -8,6 +19,6 @@ int main(){
     q=p;printf("Line 8: value of q-> %d\n",q);
     a=(*p)*(*q);printf("Line 9: value of a-> %d\n",a);
     *p=a%b;printf("Line 10: value of b-> %d\n",b);
-    printf("Line 11: value of b-> %d\n",b);
+    printf("Line 11: value of b-> %d\n",b);*/
 
 }
