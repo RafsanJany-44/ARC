@@ -1,59 +1,41 @@
-# import random to use random shuffle function.
-import random
+class SavingsAccount:
 
-class Student(object):
+    RATE = 0.02
 
-    def __init__(self, name, number):
+    def __init__(self, name, pin, balance=0.0):
         self.name = name
-        self.scores = []
-        for count in range(number):
-            self.scores.append(0)
+        self.pin = pin
+        self.balance = balance
+
+    def __str__(self):
+        result = 'Name:    ' + self.name + '\n'
+        result += 'PIN:     ' + self.pin + '\n'
+        result += 'Balance: ' + str(self.balance)
+        return result
+
+    def getBalance(self):
+        return self.balance
 
     def getName(self):
         return self.name
 
-    def setScore(self, i, score):
-        self.scores[i - 1] = score
+    def getPin(self):
+        return self.pin
 
-    def getScore(self, i):
-        return self.scores[i - 1]
+    def deposit(self, amount):
+        self.balance += amount
+        return None
 
-    def getAverage(self):
-        return sum(self.scores) / len(self._scores)
-
-    def getHighScore(self):
-        return max(self.scores)
-
-    def __str__(self):
-        return "Name: " + self.name + "\nScores: " +" ".join(map(str, self.scores))
-
-    def __lt__(self, other):
-        return self.name < other.name
-
-    def __ge__(self, other):
-        return self.name >= other.name
-
-    def __eq__(self, other):
-        if self is other:
-            return True
-        elif type(self) != type(other):
-            return False
+    def withdraw(self, amount):
+        if amount < 0:
+            return "Amount must be >= 0"
+        elif self.balance < amount:
+            return "Insufficient funds"
         else:
-            return self.name == other.name
+            self.balance -= amount
+            return None
 
-def main():
-
-    l = []
-    for count in reversed(range(5)):
-        s = Student("Name" + str(count + 1), 10)
-        l.append(s)
-
-    print("Sorted list of students:")
-    random.shuffle(l)
-    l.sort()
-
-    for obj in l:
-        print(obj.__str__())
-
-if __name__ == "__main__":
-    main()
+    def computeInterest(self):
+        interest = self.balance * SavingsAccount.RATE
+        self.deposit(interest)
+        return interest
