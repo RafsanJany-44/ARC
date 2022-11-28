@@ -1,0 +1,16 @@
+add $s0, $s1
+addi $s0, 20
+sub $s0, $s1
+and $s0, $s1
+sll $s0, 4
+lw $s0, 2
+sw $s0, 2
+in $s0
+out $s1
+disp
+beq $s0,L
+bne $s0,L
+slt $s0, $s1
+slti $s0, 2
+bge $s0,L
+j l
